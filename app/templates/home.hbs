@@ -1,0 +1,6 @@
+{{#each model.data.children as |image|}}
+  {{#if (eq image.data.post_hint 'image')}}
+    <img src="{{image.data.url}}" width="400">
+  {{/if}}
+{{/each}}
+{{outlet}}
