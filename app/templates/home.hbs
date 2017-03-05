@@ -1,6 +1,13 @@
-{{#each model.data.children as |image|}}
-  {{#if (eq image.data.post_hint 'image')}}
-    <img src="{{image.data.url}}" width="400">
-  {{/if}}
-{{/each}}
+<div class="row justify-content-md-center">
+  {{#each (filter-by 'data.post_hint' 'image' model.data.children) as |image index|}}
+    <div class="col">
+      <div class="card" style="width: 500px">
+        <img class="card-img-top" src="{{image.data.url}}" width="500" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">{{image.data.title}}</h4>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
 {{outlet}}
