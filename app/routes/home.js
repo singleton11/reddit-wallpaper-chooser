@@ -10,8 +10,6 @@ import Ember from 'ember';
  * @public
  */
 export default Ember.Route.extend({
-
-  loading: false,
   /**
    * Gets r/wallpapers top
    *
