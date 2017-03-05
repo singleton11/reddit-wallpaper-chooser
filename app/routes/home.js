@@ -19,6 +19,6 @@ export default Ember.Route.extend({
    */
   model() {
     // Get /r/wallpapers JSON
-    return $.getJSON('https://www.reddit.com/r/wallpapers.json');
+    return Ember.$.getJSON('https://www.reddit.com/r/wallpapers.json');
   },
 });
